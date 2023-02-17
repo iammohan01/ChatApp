@@ -9,21 +9,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.min.js" integrity="sha512-E1FCVqEhkBCsxW0xRseAo/Mf/u+7cqKxQQ5R4RNHMHH3CxYpQmeSnXL9Tcf6amYSgy/dR3/utZt2TFY05OGabQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Vite + React</title>
-    <script type="module" crossorigin src="/assets/index-48011328.js"></script>
-    <link rel="stylesheet" href="/assets/index-ec779009.css">
+    <script type="module" crossorigin src="/assets/index-6ca85ba6.js"></script>
+    <link rel="stylesheet" href="/assets/index-932fc46f.css">
   </head>
   <body>
     <div id="root"></div>
     
     <script>
-      const end = `localhost:8080`;
-       // let socketForMessageTransfer = new WebSocket(`ws://localhost:8080/demo2_war_exploded/chat/${localStorage.getItem("uid")}`)
-
+      let socket = new WebSocket(`ws://${window.location.host}/chat/${localStorage.getItem("uid")}`)
       function getProfile(){
 
         let xhr = new XMLHttpRequest();
-        // xhr.open("GET","/GetProfileImg",true)
-        xhr.open("GET","http://localhost:8080/demo2_war_exploded/GetProfileImg",true)
+        xhr.open("GET","/GetProfileImg",true)
+        // xhr.open("GET","http://localhost:8080/demo2_war_exploded/GetProfileImg",true)
         xhr.responseType = "arraybuffer";
         xhr.onreadystatechange = ()=>{
             // console.log(this);
