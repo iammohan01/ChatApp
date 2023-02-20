@@ -9,15 +9,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.min.js" integrity="sha512-E1FCVqEhkBCsxW0xRseAo/Mf/u+7cqKxQQ5R4RNHMHH3CxYpQmeSnXL9Tcf6amYSgy/dR3/utZt2TFY05OGabQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Vite + React</title>
-    <script type="module" crossorigin src="/assets/index-d7bb36bd.js"></script>
-    <link rel="stylesheet" href="/assets/index-43782987.css">
+    <script type="module" crossorigin src="/assets/index-285a35b0.js"></script>
+    <link rel="stylesheet" href="/assets/index-a2699d2e.css">
   </head>
   <body>
     <div id="root"></div>
     
     <script>
-      // let socket = new WebSocket(`ws://${window.location.host}/chat/${localStorage.getItem("uid")}`)
-      let socket = new WebSocket(`ws://localhost:8081/demo2_war_exploded/chat/${localStorage.getItem("uid")}`)
+      let socket = new WebSocket(`ws://${window.location.host}/chat/${localStorage.getItem("uid")}`)
+      // let socket = new WebSocket(`ws://localhost:8081/demo2_war_exploded/chat/${localStorage.getItem("uid")}`)
+      let connectionSocket = new WebSocket(`ws://${window.location.host}/getOnlineStatus/${localStorage.getItem("uid")}`)
+      // let connectionSocket = new WebSocket(`ws://localhost:8081/demo2_war_exploded/getOnlineStatus/${localStorage.getItem("uid")}`)
+
       // let endURL = 'http://localhost:8081/demo2_war_exploded'
       let endURL = ""
       function getProfile(){
