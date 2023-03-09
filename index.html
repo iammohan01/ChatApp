@@ -9,21 +9,21 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/pbkdf2.min.js" integrity="sha512-E1FCVqEhkBCsxW0xRseAo/Mf/u+7cqKxQQ5R4RNHMHH3CxYpQmeSnXL9Tcf6amYSgy/dR3/utZt2TFY05OGabQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <title>Vite + React</title>
-    <script type="module" crossorigin src="/assets/index-e6f5e6c6.js"></script>
-    <link rel="stylesheet" href="/assets/index-64e37517.css">
+    <title>Chatter Box</title>
+    <script type="module" crossorigin src="/assets/index-a66c5e2a.js"></script>
+    <link rel="stylesheet" href="/assets/index-e7b3bca4.css">
   </head>
   <body>
     <div id="root"></div>
     
     <script>
-      let socket = new WebSocket(`ws://${window.location.host}/chat/${localStorage.getItem("uid")}`)
-      // let socket = new WebSocket(`ws://localhost:8081/demo2_war_exploded/chat/${localStorage.getItem("uid")}`)
-      let connectionSocket = new WebSocket(`ws://${window.location.host}/getOnlineStatus/${localStorage.getItem("uid")}`)
-      // let connectionSocket = new WebSocket(`ws://localhost:8081/demo2_war_exploded/getOnlineStatus/${localStorage.getItem("uid")}`)
+      const socket = new WebSocket(`ws://${window.location.host}/chat/${localStorage.getItem("uid")}`)
+      // const socket = new WebSocket(`ws://localhost:8081/demo2_war_exploded/chat/${localStorage.getItem("uid")}`)
+      const connectionSocket = new WebSocket(`ws://${window.location.host}/getOnlineStatus/${localStorage.getItem("uid")}`)
+      // const connectionSocket = new WebSocket(`ws://localhost:8081/demo2_war_exploded/getOnlineStatus/${localStorage.getItem("uid")}`)
       //
-      // let endURL = 'http://localhost:8081/demo2_war_exploded'
-      let endURL = ""
+      // const endURL = 'http://localhost:8081/demo2_war_exploded'
+      const endURL = ""
       function getProfile(){
 
         let xhr = new XMLHttpRequest();
